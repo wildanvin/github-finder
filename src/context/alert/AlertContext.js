@@ -10,9 +10,10 @@ export const AlertProvider = ({ children }) => {
 
   //Set an alert
   const setAlert = (msg, type) => {
+    //console.log(msg, type)
     dispatch({
       type: "SET_ALERT",
-      PAYLOAD: { msg, type },
+      payload: { msg, type },
     })
 
     setTimeout(() => dispatch({ type: "REMOVE_ALERT" }), 3000)
